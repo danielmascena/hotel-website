@@ -1,0 +1,32 @@
+PALHETA DE CORES
+
+#1A9FE0 - azul ceu 
+#A1E8FC - azul nuvem
+#75D6FE - azul mar
+#4DB275 - verde mata
+#F8E86B - amarelo sol
+#887C6D - marrom coqueiro
+
+#99CEFE
+#E0E6EA
+#EEF3F5
+
+DIMENSAO LOGO
+
+  fundo  -  logo
+
+1905x800 - 1136x627
+1199x700 - 840x463
+768x400  - 468x258
+400x400  - 320x177
+
+Natal: Excelente clima para aproveitar cada momento, faz sol em mais de 300 dias por ano, com temperatura média de 28°C 
+
+
+<!-- SVG syntax --> 
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+<linearGradient id="g898" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop stop-color="#EEF3F5" offset="0"/><stop stop-color="#E0E6EA" offset="0.2"/><stop stop-color="#E0E0E2" offset="0.4"/><stop stop-color="#99CEFE" offset="0.6"/>
+</linearGradient>
+<rect x="0" y="0" width="1" height="1" fill="url(#g898)" />
+</svg>

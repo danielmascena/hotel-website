@@ -1,0 +1,17 @@
+{
+  "name": "enseada-site",
+  "version": "2.0.0",
+  "description": "Website de hospedagem",
+  "main": "index.html",
+  "directories": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imagemin": "imagemin assets/imagens assets/imagens/dist -p",
+    "uglify": "uglifyjs assets/javascripts/enseada.js -o assets/javascripts/enseada.min.js --lint",
+    "minify": "minify path/to/style.css > path/to/style.min.css"
+  },
+  "author": "Daniel Mascena",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
