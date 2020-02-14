@@ -1,64 +1,74 @@
-main, 
-section, 
-article, 
-aside, 
-footer, 
-header, 
-nav, 
-hgroup, 
-figcaption, 
+main,
+section,
+article,
+aside,
+footer,
+header,
+nav,
+hgroup,
+figcaption,
 figure,
-details, 
+details,
 summary {
-  display:block;
+    display: block;
 }
 
 body {
     font-family: 'Raleway', sans-serif;
-	overflow-x: hidden;
+    overflow-x: hidden;
     padding: 0;
-	margin: 0;
+    margin: 0;
 }
 
-body, 
-main, 
-header, 
-nav, 
-footer, 
-section, 
-article, 
+body,
+main,
+header,
+nav,
+footer,
+section,
+article,
 aside,
-hgroup, 
-figcaption, 
+hgroup,
+figcaption,
 figure,
-details, 
+details,
 summary,
 div,
-p, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
     box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-details { padding: 1em; }
+details {
+    padding: 1em;
+}
 
 /* Apply a pointer cursor and style the background upon hover to indicate <summary> is a clickable element. */
 /* These styles can be applied regardless of whether the fallback is needed */
 
-summary { cursor: pointer; }
-summary:hover, summary:focus { background: #EEF3F5; }
+summary {
+    cursor: pointer;
+}
+
+summary:hover,
+summary:focus {
+    background: #EEF3F5;
+}
 
 /* The following styles are not really needed, since the jQuery script takes care of hiding/displaying the elements. */
 /* However, we’re still gonna use CSS as well to prevent FOUC in browsers that understand these selectors. */
 /* Remember: by default (and probably most of the time), the contents of the <details> element are hidden. */
 
-.no-details details > * { display: none; }
+.no-details details>* {
+    display: none;
+}
 
 /* This doesn’t work very well in Firefox 3.6.x */
 /* .no-details details[open] > * { display: block; } */
@@ -69,8 +79,17 @@ summary:hover, summary:focus { background: #EEF3F5; }
 
 /* And yes, it should really be ::before, but that doesn’t work in IE8 */
 
-.no-details details > summary:before { float: left; width: 20px; content: '► '; color: #ab2277;}
-.no-details details.open > summary:before { content: '▼ '; color: #ab2277;}
+.no-details details>summary:before {
+    float: left;
+    width: 20px;
+    content: '► ';
+    color: #ab2277;
+}
+
+.no-details details.open>summary:before {
+    content: '▼ ';
+    color: #ab2277;
+}
 
 /* For IE6 and IE7, who don’t support generated content, you could use padding-left + a background image instead */
 /* I really couldn’t be bothered though. */
@@ -80,7 +99,10 @@ summary:hover, summary:focus { background: #EEF3F5; }
 */
 /* Make sure summary remains visible */
 
-.no-details details summary { display: block; }
+.no-details details summary {
+    display: block;
+}
+
 .nowrap {
     white-space: nowrap;
 }
@@ -99,8 +121,10 @@ summary:hover, summary:focus { background: #EEF3F5; }
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -115,6 +139,7 @@ summary:hover, summary:focus { background: #EEF3F5; }
 .clearfix {
     *zoom: 1;
 }
+
 .container {
     overflow: hidden;
 }
@@ -128,10 +153,10 @@ summary:hover, summary:focus { background: #EEF3F5; }
 }
 
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
 h1 {
@@ -148,7 +173,7 @@ h2 {
 
 /*** Cor dos links ***/
 
-#menu > a,
+#menu>a,
 #retorna-topo i,
 #retorna-topo {
     color: #1A9FE0;
@@ -161,6 +186,7 @@ h2 {
 header {
     display: none;
 }
+
 #menu {
     text-transform: uppercase;
     background-color: #fff;
@@ -170,14 +196,16 @@ header {
     width: 100%;
     top: 0;
 }
-#menu > a {
-	text-decoration: none;
+
+#menu>a {
+    text-decoration: none;
     margin: 12px 18px;
     font-size: 1.34em;
     letter-spacing: 2;
     float: left;
 }
-#menu > a:after {
+
+#menu>a:after {
     transition: width ease .6s, background ease .6s;
     -moz-transition: width ease .6s, background ease .6s;
     -webkit-transition: width ease .6s, background ease .6s;
@@ -187,11 +215,13 @@ header {
     height: 2px;
     width: 0;
 }
-#menu > a:hover:after {
+
+#menu>a:hover:after {
     background: #1A9FE0;
-    width: 100%; 
+    width: 100%;
 }
-#menu > a:first-child {
+
+#menu>a:first-child {
     margin-left: 5%;
 }
 
@@ -208,11 +238,13 @@ header {
     position: relative;
     height: 800px;
 }
+
 #logo {
     position: absolute;
     width: 60%;
     top: 70px;
 }
+
 #inicio p {
     background-color: rgb(83, 183, 110);
     transition: all .5s ease;
@@ -231,26 +263,31 @@ header {
     top: 480px;
     right: 7%;
 }
+
 #inicio p:hover {
     border-color: rgb(83, 183, 110);
     color: rgb(83, 183, 110);
     background-color: white;
 }
+
 #apresentacao {
     background: -webkit-linear-gradient(#FFF, #F8E86B);
     background: linear-gradient(#FFF, #F8E86B);
-    padding: 20px; 
+    padding: 20px;
     overflow: hidden;
 }
+
 #apresentacao h1 {
     border-bottom: 5px solid #4DB275;
     text-shadow: 2px 3px 80px rgb(248, 234, 114);
     margin-bottom: 30px;
     color: #887C6D;
 }
+
 .fb-like {
     display: none !important;
 }
+
 #intro {
     text-align: justify;
     text-indent: 30px;
@@ -261,16 +298,19 @@ header {
     float: left;
     padding: 30px 5% 60px;
 }
+
 .titulo .fa-facebook-official {
     color: #405D9B;
 }
+
 .titulo .fa-sun-o {
     background-color: rgb(50, 191, 249);
     border-radius: 50%;
     border: 1px solid;
     color: #F8E86B;
 }
-#weather-wrapper, 
+
+#weather-wrapper,
 #fb-page-wrapper {
     margin-top: 20px;
     float: right;
@@ -278,31 +318,35 @@ header {
     display: table;
     text-align: center;
 }
-#weather-wrapper .titulo, 
+
+#weather-wrapper .titulo,
 #fb-page-wrapper .titulo {
     margin-bottom: 10px;
     margin-top: 30px;
     color: rgb(0, 142, 201);
     font-size: 1.5em;
 }
+
 @font-face {
     font-family: 'weather';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+        url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+        url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+        url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 i {
-  color: #FFF;
-  font-family: weather;
-  font-size: 130px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.0;
+    color: #FFF;
+    font-family: weather;
+    font-size: 130px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.0;
 }
+
 i.icon-10,
 i.icon-18,
 i.icon-35,
@@ -312,6 +356,7 @@ i.icon-43,
 i.icon-46 {
     color: #1A9FE0;
 }
+
 i.icon-19,
 i.icon-20,
 i.icon-21,
@@ -324,65 +369,211 @@ i.icon-30,
 i.icon-44 {
     color: #A1E8FC;
 }
+
 i.icon-32,
 i.icon-34,
 i.icon-36 {
     color: #FFF3A1;
 }
+
 i.icon-32:hover,
 i.icon-34:hover,
 i.icon-36:hover {
     text-shadow: 0px 0px 10px yellow;
     cursor: alias;
 }
-.icon-0:before { content: ":"; }
-.icon-1:before { content: "p"; }
-.icon-2:before { content: "S"; }
-.icon-3:before { content: "Q"; }
-.icon-4:before { content: "S"; }
-.icon-5:before { content: "W"; }
-.icon-6:before { content: "W"; }
-.icon-7:before { content: "W"; }
-.icon-8:before { content: "W"; }
-.icon-9:before { content: "I"; }
-.icon-10:before { content: "W"; }
-.icon-11:before { content: "I"; }
-.icon-12:before { content: "I"; }
-.icon-13:before { content: "I"; }
-.icon-14:before { content: "I"; }
-.icon-15:before { content: "W"; }
-.icon-16:before { content: "I"; }
-.icon-17:before { content: "W"; }
-.icon-18:before { content: "U"; }
-.icon-19:before { content: "Z"; }
-.icon-20:before { content: "Z"; }
-.icon-21:before { content: "Z"; }
-.icon-22:before { content: "Z"; }
-.icon-23:before { content: "Z"; }
-.icon-24:before { content: "E"; }
-.icon-25:before { content: "E"; }
-.icon-26:before { content: "3"; }
-.icon-27:before { content: "a"; }
-.icon-28:before { content: "A"; }
-.icon-29:before { content: "a"; }
-.icon-30:before { content: "A"; }
-.icon-31:before { content: "6"; }
-.icon-32:before { content: "1"; }
-.icon-33:before { content: "6"; }
-.icon-34:before { content: "1"; }
-.icon-35:before { content: "W"; }
-.icon-36:before { content: "1"; }
-.icon-37:before { content: "S"; }
-.icon-38:before { content: "S"; }
-.icon-39:before { content: "S"; }
-.icon-40:before { content: "M"; }
-.icon-41:before { content: "W"; }
-.icon-42:before { content: "I"; }
-.icon-43:before { content: "W"; }
-.icon-44:before { content: "a"; }
-.icon-45:before { content: "S"; }
-.icon-46:before { content: "U"; }
-.icon-47:before { content: "S"; }
+
+.icon-0:before {
+    content: ":";
+}
+
+.icon-1:before {
+    content: "p";
+}
+
+.icon-2:before {
+    content: "S";
+}
+
+.icon-3:before {
+    content: "Q";
+}
+
+.icon-4:before {
+    content: "S";
+}
+
+.icon-5:before {
+    content: "W";
+}
+
+.icon-6:before {
+    content: "W";
+}
+
+.icon-7:before {
+    content: "W";
+}
+
+.icon-8:before {
+    content: "W";
+}
+
+.icon-9:before {
+    content: "I";
+}
+
+.icon-10:before {
+    content: "W";
+}
+
+.icon-11:before {
+    content: "I";
+}
+
+.icon-12:before {
+    content: "I";
+}
+
+.icon-13:before {
+    content: "I";
+}
+
+.icon-14:before {
+    content: "I";
+}
+
+.icon-15:before {
+    content: "W";
+}
+
+.icon-16:before {
+    content: "I";
+}
+
+.icon-17:before {
+    content: "W";
+}
+
+.icon-18:before {
+    content: "U";
+}
+
+.icon-19:before {
+    content: "Z";
+}
+
+.icon-20:before {
+    content: "Z";
+}
+
+.icon-21:before {
+    content: "Z";
+}
+
+.icon-22:before {
+    content: "Z";
+}
+
+.icon-23:before {
+    content: "Z";
+}
+
+.icon-24:before {
+    content: "E";
+}
+
+.icon-25:before {
+    content: "E";
+}
+
+.icon-26:before {
+    content: "3";
+}
+
+.icon-27:before {
+    content: "a";
+}
+
+.icon-28:before {
+    content: "A";
+}
+
+.icon-29:before {
+    content: "a";
+}
+
+.icon-30:before {
+    content: "A";
+}
+
+.icon-31:before {
+    content: "6";
+}
+
+.icon-32:before {
+    content: "1";
+}
+
+.icon-33:before {
+    content: "6";
+}
+
+.icon-34:before {
+    content: "1";
+}
+
+.icon-35:before {
+    content: "W";
+}
+
+.icon-36:before {
+    content: "1";
+}
+
+.icon-37:before {
+    content: "S";
+}
+
+.icon-38:before {
+    content: "S";
+}
+
+.icon-39:before {
+    content: "S";
+}
+
+.icon-40:before {
+    content: "M";
+}
+
+.icon-41:before {
+    content: "W";
+}
+
+.icon-42:before {
+    content: "I";
+}
+
+.icon-43:before {
+    content: "W";
+}
+
+.icon-44:before {
+    content: "a";
+}
+
+.icon-45:before {
+    content: "S";
+}
+
+.icon-46:before {
+    content: "U";
+}
+
+.icon-47:before {
+    content: "S";
+}
 
 #weather {
     box-shadow: 3px 20px 100px 5px rgb(248, 234, 114);
@@ -392,69 +583,86 @@ i.icon-36:hover {
     max-width: 350px;
     margin: auto;
 }
+
 #weather h2 {
-  margin: 0 0 8px;
-  color: #FFF;
-  font-weight: 300;
-  text-align: center;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 0 0 8px;
+    color: #FFF;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
+
 #weather i {
     font-size: 2.2em;
 }
+
 #weather ul {
-  margin: 0;
-  padding: 0;
-  color: #FFF;
-  background: #887C6D;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    background: #887C6D;
     font-size: 1em;
 }
+
 #weather li {
-  display: inline-block;
-  /* inline block hack for IE 6&7 */
-  zoom: 1;
-  *display: inline;
-  border-radius: 5px;
+    display: inline-block;
+    /* inline block hack for IE 6&7 */
+    zoom: 1;
+    *display: inline;
+    border-radius: 5px;
 }
+
 #weather .currently {
-  margin: 0 20px;
+    margin: 0 20px;
 }
-.windicon, .dropicon {
-  width: 50px;
+
+.windicon,
+.dropicon {
+    width: 50px;
 }
+
 #bairro {
     background-color: #4DB275;
 }
+
 #bairro figure,
 #bairro article {
     width: 50%;
     margin: 0;
 }
+
 #bairro img {
     max-width: 100%;
 }
+
 #bairro article:first-of-type {
     text-align: left;
 }
+
 #bairro article:last-of-type {
     text-align: right;
 }
+
 #bairro {
     color: #FFF;
 }
+
 #bairro p {
     text-align: justify;
     font-size: 1.2em;
     line-height: 1.5;
     margin-top: 40px;
 }
+
 #bairro article {
     padding: 4% 6% 0;
 }
+
 #fotos {
     background-color: rgba(230, 150, 47, 0.83);
     height: 800px;
 }
+
 #fotos h1 {
     text-shadow: 2px 2px 1px black;
     text-align: center;
@@ -462,25 +670,30 @@ i.icon-36:hover {
     padding-bottom: 30px;
     color: rgb(207, 68, 83);
 }
+
 #fotos .jcarousel img {
     width: 600px;
     height: 400px;
 }
+
 #fachada-aptos {
     background-image: url(../imagens/foto01-lg.png);
     background-size: cover;
     height: 1262px;
 }
+
 #infos {
     overflow: hidden;
     padding: 50px;
     min-height: 600px;
 }
+
 #infos h1 {
     text-shadow: 1px 1px 1px rgb(136, 124, 109);
     color: rgb(50, 191, 249);
     margin-bottom: 40px;
 }
+
 #infos p {
     color: rgb(74, 72, 62);
     float: left;
@@ -490,6 +703,7 @@ i.icon-36:hover {
     margin-top: 20px;
     padding: 40px 50px 10px;
 }
+
 #local {
     background-color: #E0E6EA;
     /* Comentado pq background-image como fallback sobrescreve filter.
@@ -502,54 +716,62 @@ i.icon-36:hover {
 
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#1471da, endColorstr=#1C85FB)";
     */
-    /* SVG as background image (IE9/Chrome/Safari/Opera) */ 
-    background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4OTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFRUYzRjUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFMEU2RUEiIG9mZnNldD0iMC4yIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0UwRTBFMiIgb2Zmc2V0PSIwLjQiLz48c3RvcCBzdG9wLWNvbG9yPSIjOTlDRUZFIiBvZmZzZXQ9IjAuNiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c4OTgpIiAvPgo8L3N2Zz4=);
+    /* SVG as background image (IE9/Chrome/Safari/Opera) */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4OTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFRUYzRjUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFMEU2RUEiIG9mZnNldD0iMC4yIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0UwRTBFMiIgb2Zmc2V0PSIwLjQiLz48c3RvcCBzdG9wLWNvbG9yPSIjOTlDRUZFIiBvZmZzZXQ9IjAuNiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c4OTgpIiAvPgo8L3N2Zz4=);
     background-size: cover;
     background-image: -webkit-linear-gradient(left, #EEF3F5 0%, #E0E6EA 20%,
-    #E0E0E2 40%, #99CEFE 60%);
+            #E0E0E2 40%, #99CEFE 60%);
     background-image: -o-linear-gradient(left, #EEF3F5 0%, #E0E6EA 20%,
-    #E0E0E2 40%, #99CEFE 60%);
+            #E0E0E2 40%, #99CEFE 60%);
     background-image: -moz-linear-gradient(left, #EEF3F5 0%, #E0E6EA 20%,
-    #E0E0E2 40%, #99CEFE 60%);
+            #E0E0E2 40%, #99CEFE 60%);
     background-image: -webkit-gradient(linear, left top, right top,
-    color stop(0, #EEF3F5), color stop(0.2, #E0E6EA),
-    color stop(0.4, #E0E0E2), color stop(0.6, #99CEFE));
+            color stop(0, #EEF3F5), color stop(0.2, #E0E6EA),
+            color stop(0.4, #E0E0E2), color stop(0.6, #99CEFE));
     background-image: linear-gradient(to right, #EEF3F5 0%, #E0E6EA 20%,
-    #E0E0E2 40%, #99CEFE 60%);
+            #E0E0E2 40%, #99CEFE 60%);
 }
+
 #local h1 {
     text-shadow: 2px 2px 40px rgb(171, 124, 152);
     color: rgb(171, 34, 119);
     padding: 20px;
 }
+
 #mapa {
     background: url("../imagens/mapa_menor.png") no-repeat center;
     height: 700px;
 }
+
 #local details {
     background: #FFF;
     font-family: 'Raleway', sans-serif;
 }
+
 #local details summary::-webkit-details-marker {
     color: #ab2277;
     font-size: 20px;
 }
+
 #visao-lat {
     background-image: url(../imagens/foto02-lg.jpg);
     background-position: center;
     height: 750px;
 }
+
 #contato {
     background: #F5F7FA;
     text-align: center;
     padding-top: 100px;
 }
+
 #contato h1 {
     margin-bottom: 50px;
     text-shadow: 2px 2px 50px;
     color: #887C6D;
     display: inline-block;
 }
+
 #form-pergunta {
     padding-bottom: 40px;
     padding-top: 20px;
@@ -557,11 +779,13 @@ i.icon-36:hover {
     margin: auto;
     width: 650px;
 }
+
 #form-pergunta label {
-    color: transparent;
+    text-align: left;
     display: block;
     margin: 10px;
 }
+
 .campos {
     border: 0;
     font-family: 'Raleway', sans-serif;
@@ -572,26 +796,31 @@ i.icon-36:hover {
     padding: 15px;
     width: 100%;
 }
+
 .campos:focus {
-  outline: none;
+    outline: none;
 }
+
 #form-pergunta textarea {
-  resize: none;
+    resize: none;
 }
+
 #form-pergunta button {
-  font-family: 'Raleway', sans-serif;
-  border: 1px solid #f5f7fa;
-  background: #cf4453;
-  border-radius: 5px;
-  font-size: 1.5em;
-  color: #f5f7fa;
-  cursor: pointer;
-  padding: 20px;
-  margin: 70px;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #f5f7fa;
+    background: #cf4453;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: #f5f7fa;
+    cursor: pointer;
+    padding: 20px;
+    margin: 70px;
 }
+
 #form-pergunta button:hover {
     background: #da4453;
 }
+
 footer {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -601,6 +830,7 @@ footer {
     color: #F5F7FA;
     text-align: left;
 }
+
 .col-1-3 {
     display: inline-block;
     /* inline block hack for IE 6&7 */
@@ -609,35 +839,44 @@ footer {
     vertical-align: top;
     width: 30%;
 }
+
 footer ul {
     padding: 0;
 }
+
 footer li {
     list-style: none;
     margin-bottom: 10px;
 }
+
 footer a {
     text-decoration: none;
     color: #F5F7FA;
 }
+
 #rodape i {
     color: #37BC9B;
 }
+
 #webmaster {
     font-family: monospace, sans-serif;
     margin-top: 30px;
     margin-left: -50px;
 }
-#webmaster > br {
+
+#webmaster>br {
     display: none;
 }
+
 sub {
     font-size: 1em;
 }
+
 #retorna-topo {
     letter-spacing: 0;
     float: right;
 }
+
 #msg-status {
     border-radius: 5px;
     font-size: 1.5em;
@@ -657,7 +896,7 @@ sub {
 \*------------------------------*/
 
 @media screen and (min-width: 1281px) {
-    
+
     #contato:before {
         content: url("../imagens/messenger_code_sm.png");
         position: absolute;
@@ -666,9 +905,11 @@ sub {
         -webkit-transition: 1s ease-in-out;
         -moz-transition: 1s ease-in-out;
     }
+
     #contato {
         position: relative
     }
+
     #contato:hover:before {
         transform: rotate(-15deg);
         -webkit-transform: rotate(-15deg);
@@ -680,64 +921,79 @@ sub {
 
 /* Desktop 1280px resolution */
 @media screen and (max-width: 1280px) {
-    
+
     #logo {
         width: 70%;
     }
+
     #intro {
         margin: 60px auto 30px;
         float: none;
         width: 100%;
     }
+
     .fb-like {
         display: inline !important;
     }
+
     #fb-page-wrapper {
         display: none;
     }
+
     #bairro figure,
     #bairro section,
     #bairro article {
         text-align: center !important;
         width: 100%;
     }
+
     #bairro article {
         padding: 10%;
     }
+
     #bairro p {
         margin-top: 20px;
         line-height: 2;
     }
+
     #infos {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     #infos h1 {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
     #infos p {
         padding: 30px 0 0;
         width: 70%;
     }
-    #weather-wrapper  {
+
+    #weather-wrapper {
         font-size: 12px;
     }
+
     #weather-wrapper .titulo {
         font-size: 1.6em;
     }
+
     #weather {
         font-size: 1.4em;
         width: 170px;
     }
+
     .windicon,
     .dropicon {
         width: 2em;
     }
+
     #visao-lat {
         background-image: url(../imagens/foto02-md.jpg);
         height: 500px;
     }
+
     #contato h1 {
         margin-bottom: inherit;
     }
@@ -751,20 +1007,25 @@ sub {
         background-image: url(../imagens/fundo-w1199.png);
         height: 700px;
     }
+
     #inicio p {
         line-height: 1.3;
         font-size: 1.1em;
         padding: 20px;
     }
+
     #intro {
         font-size: 1.2em;
     }
+
     #form-pergunta {
         width: 600px;
     }
+
     #form-pergunta button {
         padding: 15px;
     }
+
     #webmaster {
         margin-left: -30px;
     }
@@ -774,26 +1035,32 @@ sub {
 /* General small screen Mobile down size from 768px
 ============================================================================================== */
 
-@media handheld, only screen and (max-width: 768px) {
-    
+@media handheld,
+only screen and (max-width: 768px) {
+
     h1 {
         font-size: 1.8em;
         text-shadow: initial !important;
     }
+
     h2 {
         font-size: 1.3em;
     }
+
     #menu {
         height: 7vw;
     }
-    #menu > a {
+
+    #menu>a {
         margin: 1.5vw;
         font-size: 3vw;
     }
+
     #inicio {
         background-image: url("../imagens/fundo-w768.png");
         height: 400px;
     }
+
     #inicio p {
         line-height: normal;
         border-width: 1px;
@@ -804,39 +1071,50 @@ sub {
         width: 30%;
         right: 5%;
     }
+
     #apresentacao {
         padding: 2em 2em 0;
     }
+
     #apresentacao h1 {
         margin-top: 1em;
     }
+
     #intro {
         padding: 10px 20px 60px;
         font-size: 1em;
     }
+
     #bairro article {
         padding: 3em 20px;
     }
+
     #bairro p {
         font-size: .9em;
     }
+
     #fotos {
         height: 580px;
     }
+
     #fotos h1 {
         padding-top: 50px;
     }
+
     .jcarousel-wrapper {
         width: 400px;
-        height:320px;
+        height: 320px;
     }
+
     #fotos .jcarousel img {
         width: 400px;
         height: 300px;
     }
+
     #infos h1 {
         float: left;
     }
+
     #infos p {
         float: none;
         width: 95%;
@@ -844,91 +1122,110 @@ sub {
         overflow: hidden;
         font-size: 1em;
     }
+
     #weather-wrapper {
         float: right;
         width: 90px;
         padding: 0;
         margin: 0 5vw;
     }
+
     #weather-wrapper .titulo {
         font-size: 1.3em;
         text-align: left;
         margin: 0;
         padding-bottom: 5px;
     }
+
     #weather {
         display: inline-block;
         font-size: 1.3em;
         width: 90px;
     }
+
     #weather h2 {
         margin: 0;
     }
+
     #weather i {
         line-height: .7;
     }
-    #weather ul li:not(:first-child){
+
+    #weather ul li:not(:first-child) {
         display: none;
     }
+
     #visao-lat {
         background-image: url(../imagens/foto02-sm.jpg);
         height: 300px;
     }
+
     #local {
         background: none;
     }
+
     #local h1 {
         background-color: #E0E6EA;
-        
-        /* SVG as background image (IE9/Chrome/Safari/Opera) */ 
-        background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4OTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFRUYzRjUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFMEU2RUEiIG9mZnNldD0iMC4yIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0UwRTBFMiIgb2Zmc2V0PSIwLjQiLz48c3RvcCBzdG9wLWNvbG9yPSIjOTlDRUZFIiBvZmZzZXQ9IjAuNiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c4OTgpIiAvPgo8L3N2Zz4=);
+
+        /* SVG as background image (IE9/Chrome/Safari/Opera) */
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4OTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFRUYzRjUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFMEU2RUEiIG9mZnNldD0iMC4yIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0UwRTBFMiIgb2Zmc2V0PSIwLjQiLz48c3RvcCBzdG9wLWNvbG9yPSIjOTlDRUZFIiBvZmZzZXQ9IjAuNiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c4OTgpIiAvPgo8L3N2Zz4=);
         background-size: cover;
         background-image: -webkit-linear-gradient(left, #EEF3F5 0%, #E0E6EA 20%,
-        #E0E0E2 40%, #99CEFE 60%);
+                #E0E0E2 40%, #99CEFE 60%);
         background-image: -o-linear-gradient(left, #EEF3F5 0%, #E0E6EA 20%,
-        #E0E0E2 40%, #99CEFE 60%);
+                #E0E0E2 40%, #99CEFE 60%);
         background-image: -moz-linear-gradient(left, #EEF3F5 0%, #E0E6EA 20%,
-        #E0E0E2 40%, #99CEFE 60%);
+                #E0E0E2 40%, #99CEFE 60%);
         background-image: -webkit-gradient(linear, left top, right top,
-        color stop(0, #EEF3F5), color stop(0.2, #E0E6EA),
-        color stop(0.4, #E0E0E2), color stop(0.6, #99CEFE));
+                color stop(0, #EEF3F5), color stop(0.2, #E0E6EA),
+                color stop(0.4, #E0E0E2), color stop(0.6, #99CEFE));
         background-image: linear-gradient(to right, #EEF3F5 0%, #E0E6EA 20%,
-        #E0E0E2 40%, #99CEFE 60%);
+                #E0E0E2 40%, #99CEFE 60%);
         padding: 10px;
     }
+
     #local details {
         font-size: 0.8em;
     }
+
     #mapa {
         background: url('../imagens/mapa_menor-768.png') no-repeat;
         background-position-x: 70%;
         height: 533px;
     }
+
     #contato {
         padding-top: 50px;
     }
+
     #form-pergunta {
         width: 400px;
     }
+
     .campos {
         font-size: 1.3em;
     }
+
     #form-pergunta button {
         font-size: 1em;
         padding: 10px;
         margin: 40px;
     }
+
     footer {
         letter-spacing: 1px;
         font-size: 0.8em;
     }
+
     .col-1-3 {
         width: 100%;
     }
+
     #webmaster {
         margin-left: 0;
     }
-    #webmaster > br {
+
+    #webmaster>br {
         display: inline;
     }
 }
@@ -939,19 +1236,23 @@ sub {
 /* Add your styles for devices with a maximum width of 480 */
 
 @media screen and (max-width: 480px) {
-    
-    body>div#boxht {display: none !important;}
-    
+
+    body>div#boxht {
+        display: none !important;
+    }
+
     h1 {
         font-size: 6.7vw;
     }
+
     h2 {
         font-size: 5vw;
     }
+
     #headerMobile {
-        width: 100%; 
-        background: #ffffff; 
-        height: 40px; 
+        width: 100%;
+        background: #ffffff;
+        height: 40px;
         line-height: 60px;
         border-bottom: 1px solid #dddddd;
         position: fixed;
@@ -959,11 +1260,13 @@ sub {
         top: 0;
         display: block;
     }
+
     #headerMobile span {
         font-style: italic;
         color: rgb(153, 153, 153);
         margin-left: 20px;
     }
+
     .hamburger,
     .cross {
         z-index: 10000000000000;
@@ -979,19 +1282,23 @@ sub {
         width: 30px;
         padding: 0;
     }
+
     .hamburger {
         font-weight: bold;
         font-size: 1.4em;
     }
+
     .cross {
         font-size: 4em;
         display: none;
     }
-    #menu { 
+
+    #menu {
         display: none;
         height: auto;
         top: 40px;
     }
+
     #menu a {
         letter-spacing: .5vw;
         text-align: center;
@@ -1002,9 +1309,11 @@ sub {
         float: none;
         font-weight: 800;
     }
+
     #menu a:hover:after {
         width: 0;
     }
+
     #menu a:active {
         background: RGB(26, 159, 224);
         transition-property: background;
@@ -1012,12 +1321,15 @@ sub {
         -webkit-transition-property: background;
         color: white;
     }
-    #menu > a:first-child {
+
+    #menu>a:first-child {
         margin-left: auto;
     }
+
     #logo {
         width: 90%;
     }
+
     #inicio p {
         transition: none;
         -moz-transition: none;
@@ -1025,9 +1337,11 @@ sub {
         top: 285px;
         width: 55%;
     }
+
     #apresentacao h1 {
         margin-bottom: 20px;
     }
+
     #intro {
         line-height: 1.5;
         font-size: 0.8em;
@@ -1035,53 +1349,67 @@ sub {
         margin: 30px 0;
         width: 100%;
     }
+
     .windicon,
     .dropicon {
         width: 20%;
     }
+
     #bairro p {
         font-size: .8em;
     }
+
     #fotos {
         height: 430px;
     }
+
     .jcarousel-wrapper {
         width: 250px;
         height: 220px;
         margin-top: 20px;
     }
+
     #fotos .jcarousel img {
         width: 250px;
         height: 200px;
     }
+
     #infos p {
         font-size: .8em;
         width: 100%
     }
+
     #weather-wrapper {
         margin: 0;
         width: auto;
     }
+
     #weather-wrapper .titulo {
         font-size: 1.1em;
     }
+
     #weather {
         width: auto;
     }
+
     #weather ul {
         font-size: .75em;
     }
+
     #visao-lat {
         background-image: url(../imagens/foto02-xs.jpg);
         height: 188px;
     }
+
     #mapa {
         background: url('../imagens/mapa_menor-480.png') center no-repeat;
         height: 333px;
     }
+
     #form-pergunta {
         width: 90%;
     }
+
     .campos {
         font-size: 0.8em;
         width: 80%;
@@ -1099,16 +1427,19 @@ sub {
 /* Add your styles for devices with a maximum width of 320 */
 
 @media screen and (max-width: 320px) {
-    
+
     #inicio {
         background-image: url(../imagens/fundo-w400.png);
     }
+
     #weather-wrapper .titulo {
         font-size: 4.25vw;
     }
+
     #weather ul {
-        font-size:  4vw;
+        font-size: 4vw;
     }
+
     footer {
         letter-spacing: 0;
     }
@@ -1131,13 +1462,14 @@ sub {
 /* Helpers for windows phone 8 */
 
 @media screen and (max-width: 400px) {
-    
-  @-ms-viewport {
-    width: device-width;
-    zoom: 1.0;
-  }
-  @viewport {
-    width: device-width;
-    zoom: 1.0;
-  }
+
+    @-ms-viewport {
+        width: device-width;
+        zoom: 1.0;
+    }
+
+    @viewport {
+        width: device-width;
+        zoom: 1.0;
+    }
 }
